@@ -8,11 +8,11 @@ const ListItemDiv = Styled.div`
 float:left
 `
 
-const ViewedItems = ({ movies, type }) => {  console.log(movies)
+const ViewedItems = ({ movies, type }) => { 
 return	type === "list" ? 	<div>
 								{movies.map(movie => 
-									<ListItemDiv>
-										<ListItem key={movie.id} movie={movie.title} img={movie.poster_path} viewed={movie.viewed} overview={movie.overview}/>
+									<ListItemDiv key={movie.id}>
+										<ListItem key={movie.id} movie={movie.title} img={movie.poster_path} viewed="true" overview={movie.overview}/>
 									</ListItemDiv>
 								)}
 								

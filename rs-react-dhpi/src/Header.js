@@ -1,7 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom'
 import Home from './components/Pages/Home'
-import PeliculasGrid from './components/Pages/PeliculasGrid'
+import { PopularMoviesItemsSection } from './components/Movies'
+
 
 const Header = () => {
 return	<div>
@@ -21,7 +22,7 @@ return	<div>
 			                        <Link className="nav-link" to="/Home">Home</Link>
 			                    </li>
 			                    <li className="nav-item">
-			                        <Link className="nav-link" to="/PeliculasGrid">Peliculas</Link>
+			                        <Link className="nav-link" to="/PopularMoviesItemsSection">Peliculas</Link>
 			                    </li>
 			                    <li className="nav-item">
 			                        <Link className="nav-link" to="/Home">Series</Link>
@@ -39,7 +40,9 @@ return	<div>
 			    </nav>
                 <Switch>
                 	<Route path="/Home" component={Home} />
-                	<Route path="/Peliculas" component={PeliculasGrid} />
+                	<Route path="/Peliculas" component={PopularMoviesItemsSection} />
+
+
                 </Switch>
                 </div>
 			</BrowserRouter>

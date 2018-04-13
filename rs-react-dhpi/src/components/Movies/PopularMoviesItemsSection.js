@@ -10,7 +10,7 @@ class PopularMoviesItemsSection extends Component{
 	}
 	render ()  {
 		return(
-			<ItemsSection type={this.props.type} items={this.props.items} loading={this.props.loading} />
+			<ItemsSection type="list" items={this.props.items} loading={this.props.loading} />
 		)
 	}
 }

@@ -16,16 +16,21 @@ const ItemsSection = ({ items, type, loading }) => {
 
             		items 	? 
 				            <div>
-					            <ViewedItems movies={items} type={type} />
+					            <ViewedItems movies={items} type="list" />
 							</div>
 							:
 				            <div>
-					            <img src={Err} />
+					            <img src={Err} alt="logo"/>
 							</div>
 
 
 		
 }
 
+
+
+ItemsSection.defaultProps={
+	type: 'list',
+}
 
 export default ItemsSection

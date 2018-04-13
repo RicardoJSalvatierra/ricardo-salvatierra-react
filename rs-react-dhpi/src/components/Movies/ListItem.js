@@ -2,15 +2,12 @@ import React from 'react'
 import Button from '../Button/Button'
 import GridItem from './GridItem'
 import PropTypes from 'prop-types'
-import Item from './Item.JPG'
 import Styled from 'styled-components';
 
 const Movies = Styled.div`
 	float: left;
 `
-const MoviesText = Styled.div`
-	float: left;
-`
+
 const items = [
 { title:"Agregar a Mi Lista",
   icon: "fa-eye",
@@ -39,7 +36,7 @@ return viewed && 	<div>
 
 ListItem.propTypes = {
   movie: PropTypes.string,
-  viewed: PropTypes.boolean,
+  viewed: PropTypes.string,
 };
 
 ListItem.defaultProps={
