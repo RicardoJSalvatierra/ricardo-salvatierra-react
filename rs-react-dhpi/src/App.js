@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
 import './App.css'
+//redux
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-
-import { PopularMoviesItemsSection } from './components/Movies'
-
-
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom'
+//navigation
+import { Link, Switch, Route } from 'react-router-dom'
+//components
+import  PopularMoviesItemsSection  from './components/Movies/PopularMoviesItemsSection'
+import  PopularSeriesItemsSection  from './components/Series/PopularSeriesItemsSection'
 import Home from './components/Pages/Home'
+
+
+
 
 
 
@@ -95,7 +99,7 @@ class App extends Component {
         <div className="App">
           <div>
             <header>
-              <BrowserRouter>
+              {/*<BrowserRouter>*/}
                 <div>
                   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                       <div className="container">
@@ -110,10 +114,10 @@ class App extends Component {
                                       <Link className="nav-link" to="/Home">Home</Link>
                                   </li>
                                   <li className="nav-item">
-                                      <Link className="nav-link" to="/PopularMoviesItemsSection">Peliculas</Link>
+                                      <Link className="nav-link" to="/components/PopularMoviesItemsSection">Peliculas</Link>
                                   </li>
                                   <li className="nav-item">
-                                      <Link className="nav-link" to="/PopularMoviesItemsSection">Series</Link>
+                                      <Link className="nav-link" to="/components/PopularSeriesItemsSection">Series</Link>
                                   </li>
                                   <li className="nav-item active">
                                       <Link className="nav-link" to="/Home">Mi Lista <span className="badge badge-danger">3</span></Link>
@@ -126,17 +130,21 @@ class App extends Component {
                       </div>
 
                   </nav>
-                        <Switch>
-                          <Route path="/Home" component={Home} />
-                          <Route path="/Peliculas" component={(props) => <PopularMoviesItemsSection type={this.type} />} />
-                          <Route path="/Peliculas" component={(props) => <PopularMoviesItemsSection type={this.type} />} />
-                                      <PopularMoviesItemsSection type={this.type} />
+                  <Switch>
+                    <Route exact path="/Home" component={Home} />
+                    <Route path="/components/PopularMoviesItemsSection" component={PopularMoviesItemsSection} />
+                    <Route path="/components/PopularSeriesItemsSection" component={PopularSeriesItemsSection} />
+                   
+                    {/* A JSX comment         
+                    <PopularMoviesItemsSection />
+                    <PopularSeriesItemsSection type={this.type} />
 
-                        </Switch>
+                    */}  
+                  </Switch>
 
                 </div>
 
-              </BrowserRouter>
+              {/*</BrowserRouter>*/}
 
             </header>
           </div>

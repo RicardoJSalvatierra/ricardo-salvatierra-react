@@ -1,7 +1,8 @@
-import React from 'react'
+{/*import React from 'react'
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom'
 import Home from './components/Pages/Home'
 import { PopularMoviesItemsSection } from './components/Movies'
+import { PopularSeriesItemsSection } from './components/Series'
 
 
 const Header = () => {
@@ -25,7 +26,7 @@ return	<div>
 			                        <Link className="nav-link" to="/PopularMoviesItemsSection">Peliculas</Link>
 			                    </li>
 			                    <li className="nav-item">
-			                        <Link className="nav-link" to="/Home">Series</Link>
+			                        <Link className="nav-link" to="/PopularSeriesItemsSection">Series</Link>
 			                    </li>
 			                    <li className="nav-item active">
 			                        <Link className="nav-link" to="/Home">Mi Lista <span className="badge badge-danger">3</span></Link>
@@ -41,6 +42,7 @@ return	<div>
                 <Switch>
                 	<Route path="/Home" component={Home} />
                 	<Route path="/Peliculas" component={PopularMoviesItemsSection} />
+					<Route path="/Peliculas" component={PopularSeriesItemsSection} />
 
 
                 </Switch>
@@ -50,4 +52,4 @@ return	<div>
 		</div>
 
 }
-export default Header
+export default Header*/}
